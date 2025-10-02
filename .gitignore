@@ -48,3 +48,6 @@ Thumbs.db
 # Obsidian
 .obsidian/
 
+# Environment variables
+.env
+
