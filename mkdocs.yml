@@ -60,8 +60,7 @@ plugins:
   - search:
       lang: es
       separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
-  - tags:
-      tags_file: tags.md
+  - tags
   - minify:
       minify_html: true
 
