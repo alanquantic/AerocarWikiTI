@@ -1,0 +1,23 @@
+{
+	"nodes":[
+		{"id":"63b5b2714f995883","type":"text","text":"Formulario de Pagos","x":-181,"y":-480,"width":250,"height":60,"color":"#8205ff"},
+		{"id":"7191cbcff38a83c9","type":"text","text":"Solicitar Aprobación","x":-181,"y":-360,"width":250,"height":60,"color":"#9601f9"},
+		{"id":"d784b3a8b2db76ef","type":"text","text":"Crear tarea en Planner","x":100,"y":-190,"width":250,"height":60,"color":"6"},
+		{"id":"9189293d02e7e763","type":"text","text":"Notificacion de Aprobación","x":100,"y":-70,"width":250,"height":60,"color":"#0400f5"},
+		{"id":"74105fafca08c11b","type":"text","text":"Notificación de Rechazo","x":-500,"y":-190,"width":250,"height":60,"color":"#0703fc"},
+		{"id":"4e29105cc5a7244b","type":"text","text":"Fin","x":-411,"y":-70,"width":73,"height":60},
+		{"id":"d89e0f5a0783e2b6","type":"text","text":"Se completa tarea en Planner","x":100,"y":58,"width":250,"height":60,"color":"6"},
+		{"id":"f6976ad5b4e51348","type":"text","text":"Envio de Comprobantes de Pago","x":100,"y":180,"width":250,"height":60,"color":"#0112f9"},
+		{"id":"79ff23c6799fbd06","type":"text","text":"Fin","x":185,"y":300,"width":80,"height":60}
+	],
+	"edges":[
+		{"id":"30124679bdbc6b4d","fromNode":"7191cbcff38a83c9","fromSide":"right","toNode":"d784b3a8b2db76ef","toSide":"top","label":"Aprobada"},
+		{"id":"8113bc75afaa3dd7","fromNode":"7191cbcff38a83c9","fromSide":"left","toNode":"74105fafca08c11b","toSide":"top","label":"Rechazada"},
+		{"id":"36b127080fb5186e","fromNode":"d784b3a8b2db76ef","fromSide":"bottom","toNode":"9189293d02e7e763","toSide":"top"},
+		{"id":"dca8be0a727a88d0","fromNode":"74105fafca08c11b","fromSide":"bottom","toNode":"4e29105cc5a7244b","toSide":"top"},
+		{"id":"e95c62fa7b8f942c","fromNode":"63b5b2714f995883","fromSide":"bottom","toNode":"7191cbcff38a83c9","toSide":"top"},
+		{"id":"c55e803fda8aae7c","fromNode":"9189293d02e7e763","fromSide":"bottom","toNode":"d89e0f5a0783e2b6","toSide":"top"},
+		{"id":"b06c8d8cd23ff25d","fromNode":"d89e0f5a0783e2b6","fromSide":"bottom","toNode":"f6976ad5b4e51348","toSide":"top"},
+		{"id":"576f8d4fa9e4d8f4","fromNode":"f6976ad5b4e51348","fromSide":"bottom","toNode":"79ff23c6799fbd06","toSide":"top"}
+	]
+}

@@ -1,0 +1,183 @@
+site_name: AerocarWiki TI
+site_description: Wiki de proyectos de TI - Aerocar
+site_author: Aerocar TI Team
+site_url: https://alanquantic.github.io/AerocarWikiTI/
+
+# Repositorio
+repo_name: alanquantic/AerocarWikiTI
+repo_url: https://github.com/alanquantic/AerocarWikiTI
+edit_uri: edit/main/docs/
+
+# Tema
+theme:
+  name: material
+  language: es
+  palette:
+    # Modo claro
+    - scheme: default
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Cambiar a modo oscuro
+    # Modo oscuro
+    - scheme: slate
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Cambiar a modo claro
+  
+  font:
+    text: Roboto
+    code: Roboto Mono
+  
+  features:
+    - navigation.instant      # Carga instantánea
+    - navigation.tracking     # Tracking de URL
+    - navigation.tabs         # Pestañas de navegación
+    - navigation.tabs.sticky  # Pestañas fijas
+    - navigation.sections     # Secciones expandibles
+    - navigation.expand       # Expandir por defecto
+    - navigation.top          # Botón volver arriba
+    - navigation.footer       # Footer con navegación
+    - search.suggest          # Sugerencias de búsqueda
+    - search.highlight        # Destacar búsqueda
+    - search.share           # Compartir búsqueda
+    - content.code.copy      # Copiar código
+    - content.action.edit    # Editar en GitHub
+    - content.action.view    # Ver fuente
+    - toc.follow             # TOC sigue scroll
+    - toc.integrate          # TOC integrado
+  
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/pencil
+    view: material/eye
+
+# Plugins
+plugins:
+  - search:
+      lang: es
+      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+  - tags:
+      tags_file: tags.md
+  - minify:
+      minify_html: true
+
+# Extensiones de Markdown
+markdown_extensions:
+  # Sintaxis Python Markdown
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+  
+  # PyMdown Extensions
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Navegación
+nav:
+  - Inicio: index.md
+  - Índice de Proyectos: indice-de-proyectos.md
+  
+  - Automatización:
+    - automatizacion/index.md
+    - Pagos:
+      - Solicitud de Pagos: automatizacion/pagos/solicitud-de-pagos/solicitud-de-pagos.md
+      - Proceso: automatizacion/pagos/solicitud-de-pagos/proceso.md
+      - Seguimiento de Pagos: automatizacion/pagos/seguimiento-de-pagos/seguimiento-de-pagos.md
+      - Recordatorio de Pagos: automatizacion/pagos/recordatorio-de-pagos/recordatorio-de-pagos.md
+      - Envío de Pagos a Proveedor: automatizacion/pagos/envio-de-pagos-a-proveedor/envio-de-pagos-a-proveedor.md
+    - Cobranza:
+      - Envío de Facturas a Cliente: automatizacion/cobranza/envio-de-facturas-a-cliente/envio-de-facturas-a-cliente.md
+    - Ventas:
+      - Análisis Flujo de Datos: automatizacion/ventas/analisis-flujo-de-datos/analisis-flujo-de-datos-en-sales.md
+      - Alta de Clientes: automatizacion/ventas/alta-de-clientes/alta-de-clientes.md
+  
+  - AeroLink:
+    - aerolink/index.md
+    - Comercial:
+      - Calculadora de Carga Aérea: aerolink/comercial/calculadora-de-carga-aerea.md
+      - Implementación de API de Clima: aerolink/comercial/implementacion-de-api-de-clima.md
+      - Registro de Vuelos por Proyecto: aerolink/comercial/registro-de-vuelos-por-proyecto.md
+    - Logística:
+      - Estandarización de Seguimiento Aéreo: aerolink/logistica/estandarizacion-de-seguimiento-aereo.md
+      - Seguimiento con API de Aviones: aerolink/logistica/seguimiento-con-api-de-aviones.md
+    - Terrestre:
+      - Cálculo de Demoras Terrestre: aerolink/terrestre/calculo-de-demoras-terrestre.md
+      - Conexión a API Satelital de Camiones: aerolink/terrestre/conexion-a-api-satalital-de-camiones.md
+      - Estandarización de Seguimiento Terrestre: aerolink/terrestre/estandarizacion-de-seguimiento-terrestre.md
+      - Servicios Vacíos: aerolink/terrestre/servicios-vacios.md
+    - Contabilidad:
+      - Mejora a Cancelación con Sustitución: aerolink/contabilidad/mejora-a-cancelacion-con-sustitucion.md
+      - Actualización de Index de Servicios Terrestres: aerolink/contabilidad/actualizacion-de-index-de-servicios-terrestres.md
+    - General:
+      - Conexión a API Soma: aerolink/general/conexicon-a-api-soma.md
+  
+  - Gobernanza:
+    - gobernanza/index.md
+    - Implementación de Intune: gobernanza/implementacion-de-intune.md
+    - Implementación de Active Directory: gobernanza/implementacion-de-active-directory.md
+  
+  - Ciberseguridad:
+    - ciberseguridad/index.md
+    - Capacitaciones de Ciberseguridad: ciberseguridad/capacitaciones-de-ciberseguridad.md
+    - Monitoreo de Red: ciberseguridad/monitoreo-de-red.md
+    - Optimización de Red: ciberseguridad/optimizacion-de-red.md
+  
+  - Infraestructura:
+    - infraestructura/index.md
+    - CRM: infraestructura/crm.md
+    - Internet Empresarial: infraestructura/internet-empresarial.md
+    - Telefonía Administrada: infraestructura/telefonia-administrada.md
+  
+  - Tags: tags.md
+
+# Extras
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/alanquantic
+  
+  generator: false  # Ocultar "Made with Material for MkDocs"
+
+# CSS personalizado
+extra_css:
+  - stylesheets/extra.css
+
+# Copyright
+copyright: Copyright &copy; 2025 Aerocar - Departamento de TI
+
